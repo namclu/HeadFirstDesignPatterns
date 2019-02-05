@@ -1,4 +1,4 @@
-package IntroToDesignPattern_01;
+package IntroToDesignPattern_01.behaviour;
 
 import IntroToDesignPattern_01.behaviour.QuackBehaviour;
 
