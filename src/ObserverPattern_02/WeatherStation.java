@@ -4,6 +4,7 @@ import ObserverPattern_02.displays.CurrentConditionsDisplay;
 import ObserverPattern_02.displays.ForecastDisplay;
 import ObserverPattern_02.displays.StatisticsDisplay;
 
+// Used to test our Observer Pattern implementation
 public class WeatherStation {
 
     public static void main(String[] args) {

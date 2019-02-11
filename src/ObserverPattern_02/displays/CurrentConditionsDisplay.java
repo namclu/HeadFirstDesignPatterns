@@ -3,6 +3,7 @@ package ObserverPattern_02.displays;
 import ObserverPattern_02.Observer;
 import ObserverPattern_02.Subject;
 
+// Displays the current weather conditions
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;

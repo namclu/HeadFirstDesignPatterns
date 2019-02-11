@@ -2,6 +2,8 @@ package ObserverPattern_02;
 
 import java.util.ArrayList;
 
+// Concrete implementation of Subject, meaning it has data that can be observed
+// We define how to add, delete, and notify all Observers
 public class WeatherData implements Subject {
     private ArrayList<Observer> observers;
     private float temperature;

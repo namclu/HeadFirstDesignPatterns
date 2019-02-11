@@ -3,6 +3,7 @@ package ObserverPattern_02.displays;
 import ObserverPattern_02.Observer;
 import ObserverPattern_02.WeatherData;
 
+// Displays the weather stats
 public class StatisticsDisplay implements Observer, DisplayElement {
     private float maxTemp = 0.0f;
     private float minTemp = 200;
