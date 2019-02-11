@@ -2,6 +2,7 @@ package ObserverPattern_02;
 
 import ObserverPattern_02.displays.CurrentConditionsDisplay;
 import ObserverPattern_02.displays.ForecastDisplay;
+import ObserverPattern_02.displays.HeadIndexDisplay;
 import ObserverPattern_02.displays.StatisticsDisplay;
 
 // Used to test our Observer Pattern implementation
@@ -15,6 +16,7 @@ public class WeatherStation {
         StatisticsDisplay statisticsDisplay =
                 new StatisticsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+        HeadIndexDisplay headIndexDisplay = new HeadIndexDisplay(weatherData);
 
         weatherData.setMeasurements(80, 65, 30.4f);
         weatherData.setMeasurements(82, 70, 29.2f);
