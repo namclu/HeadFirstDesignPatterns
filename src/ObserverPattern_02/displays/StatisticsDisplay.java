@@ -1,7 +1,7 @@
 package ObserverPattern_02.displays;
 
 import ObserverPattern_02.Observer;
-import ObserverPattern_02.WeatherData;
+import ObserverPattern_02.Subject;
 
 // Displays the weather stats
 public class StatisticsDisplay implements Observer, DisplayElement {
@@ -9,9 +9,9 @@ public class StatisticsDisplay implements Observer, DisplayElement {
     private float minTemp = 200;
     private float tempSum = 0.0f;
     private int numReadings;
-    private WeatherData weatherData;
+    private Subject weatherData;
 
-    public StatisticsDisplay(WeatherData weatherData) {
+    public StatisticsDisplay(Subject weatherData) {
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }

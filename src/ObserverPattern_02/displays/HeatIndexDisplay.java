@@ -1,17 +1,17 @@
 package ObserverPattern_02.displays;
 
 import ObserverPattern_02.Observer;
-import ObserverPattern_02.WeatherData;
+import ObserverPattern_02.Subject;
 
 
 // Displays the heat index info
-public class HeadIndexDisplay implements Observer, DisplayElement {
+public class HeatIndexDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
 
-    WeatherData weatherData;
+    Subject weatherData;
 
-    public HeadIndexDisplay(WeatherData weatherData) {
+    public HeatIndexDisplay(Subject weatherData) {
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
