@@ -1,19 +1,20 @@
 package ObserverPattern_02.displays;
 
-import ObserverPattern_02.Observer;
-import ObserverPattern_02.Subject;
+import ObserverPattern_02.WeatherData;
+
+import java.util.Observable;
+import java.util.Observer;
 
 
 // Displays the heat index info
 public class HeatIndexDisplay implements Observer, DisplayElement {
+    private WeatherData weatherData;
     private float temperature;
     private float humidity;
 
-    Subject weatherData;
-
-    public HeatIndexDisplay(Subject weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+    public HeatIndexDisplay(Observable observable) {
+        weatherData = (WeatherData) observable;
+        observable.addObserver(this);
     }
 
     // Calculate the heat index
@@ -30,11 +31,13 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
+    public void update(Observable observable, Object arg) {
+        if (observable instanceof WeatherData) {
+            temperature = weatherData.getTemperature();
+            humidity = weatherData.getHumidity();
 
-        display();
+            display();
+        }
     }
 
     @Override

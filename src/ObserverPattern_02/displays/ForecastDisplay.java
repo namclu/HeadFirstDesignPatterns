@@ -1,25 +1,29 @@
 package ObserverPattern_02.displays;
 
-import ObserverPattern_02.Observer;
-import ObserverPattern_02.Subject;
+import ObserverPattern_02.WeatherData;
+
+import java.util.Observable;
+import java.util.Observer;
 
 // Displays the weather forecast
 public class ForecastDisplay implements Observer, DisplayElement {
+    private WeatherData weatherData;
     private float currentPressure = 29.2f;
     private float lastPressure;
-    private Subject weatherData;
 
-    public ForecastDisplay(Subject weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+    public ForecastDisplay(Observable observable) {
+        weatherData = (WeatherData) observable;
+        observable.addObserver(this);
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        lastPressure = currentPressure;
-        currentPressure = pressure;
+    public void update(Observable observable, Object arg) {
+        if (observable instanceof WeatherData) {
+            lastPressure = currentPressure;
+            currentPressure = weatherData.getPressure();
 
-        display();
+            display();
+        }
     }
 
     @Override

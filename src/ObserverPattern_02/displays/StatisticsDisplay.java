@@ -1,35 +1,40 @@
 package ObserverPattern_02.displays;
 
-import ObserverPattern_02.Observer;
-import ObserverPattern_02.Subject;
+import ObserverPattern_02.WeatherData;
+
+import java.util.Observable;
+import java.util.Observer;
 
 // Displays the weather stats
 public class StatisticsDisplay implements Observer, DisplayElement {
+    private WeatherData weatherData;
     private float maxTemp = 0.0f;
     private float minTemp = 200;
     private float tempSum = 0.0f;
     private int numReadings;
-    private Subject weatherData;
 
-    public StatisticsDisplay(Subject weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+    public StatisticsDisplay(Observable observable) {
+        weatherData = (WeatherData) observable;
+        observable.addObserver(this);
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        tempSum += temperature;
-        numReadings++;
+    public void update(Observable observable, Object arg) {
+        if (observable instanceof WeatherData) {
+            float temperature = weatherData.getTemperature();
+            tempSum += temperature;
+            numReadings++;
 
-        if (temperature > maxTemp) {
-            maxTemp = temperature;
+            if (temperature > maxTemp) {
+                maxTemp = temperature;
+            }
+
+            if (temperature < minTemp) {
+                minTemp = temperature;
+            }
+
+            display();
         }
-
-        if (temperature < minTemp) {
-            minTemp = temperature;
-        }
-
-        display();
     }
 
     @Override
