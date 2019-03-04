@@ -1,6 +1,4 @@
-package IntroToDesignPattern_01.behaviour;
-
-import IntroToDesignPattern_01.behaviour.FlyBehaviour;
+package Ch_01_IntroToDesignPattern.behaviour;
 
 public class FlyWithWings implements FlyBehaviour {
     @Override

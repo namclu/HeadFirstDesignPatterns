@@ -1,6 +1,4 @@
-package IntroToDesignPattern_01.behaviour;
-
-import IntroToDesignPattern_01.behaviour.QuackBehaviour;
+package Ch_01_IntroToDesignPattern.behaviour;
 
 public class Quack implements QuackBehaviour {
     @Override

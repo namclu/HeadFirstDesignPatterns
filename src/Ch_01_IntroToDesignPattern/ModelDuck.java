@@ -1,7 +1,7 @@
-package IntroToDesignPattern_01;
+package Ch_01_IntroToDesignPattern;
 
-import IntroToDesignPattern_01.behaviour.FlyNoWay;
-import IntroToDesignPattern_01.behaviour.Quack;
+import Ch_01_IntroToDesignPattern.behaviour.FlyNoWay;
+import Ch_01_IntroToDesignPattern.behaviour.Quack;
 
 public class ModelDuck extends Duck {
 

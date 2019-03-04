@@ -1,7 +1,7 @@
-package IntroToDesignPattern_01;
+package Ch_01_IntroToDesignPattern;
 
-import IntroToDesignPattern_01.behaviour.FlyRocketPowered;
-import IntroToDesignPattern_01.behaviour.Squeak;
+import Ch_01_IntroToDesignPattern.behaviour.FlyRocketPowered;
+import Ch_01_IntroToDesignPattern.behaviour.Squeak;
 
 public class MiniDuckSimulator {
 
