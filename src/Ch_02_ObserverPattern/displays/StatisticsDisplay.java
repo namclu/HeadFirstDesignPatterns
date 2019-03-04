@@ -1,6 +1,6 @@
-package ObserverPattern_02.displays;
+package Ch_02_ObserverPattern.displays;
 
-import ObserverPattern_02.WeatherData;
+import Ch_02_ObserverPattern.WeatherData;
 
 import java.util.Observable;
 import java.util.Observer;

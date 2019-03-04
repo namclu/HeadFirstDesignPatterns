@@ -1,9 +1,9 @@
-package ObserverPattern_02;
+package Ch_02_ObserverPattern;
 
-import ObserverPattern_02.displays.CurrentConditionsDisplay;
-import ObserverPattern_02.displays.ForecastDisplay;
-import ObserverPattern_02.displays.HeatIndexDisplay;
-import ObserverPattern_02.displays.StatisticsDisplay;
+import Ch_02_ObserverPattern.displays.CurrentConditionsDisplay;
+import Ch_02_ObserverPattern.displays.ForecastDisplay;
+import Ch_02_ObserverPattern.displays.HeatIndexDisplay;
+import Ch_02_ObserverPattern.displays.StatisticsDisplay;
 
 // Used to test our Observer Pattern implementation
 public class WeatherStation {
