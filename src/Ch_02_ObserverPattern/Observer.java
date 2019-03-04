@@ -1,4 +1,4 @@
-package ObserverPattern_02;
+package Ch_02_ObserverPattern;
 
 // The Observer subscribes to a Subject and updates itself by calling
 // the interface's update() method when the Subject's data changes.
