@@ -1,4 +1,4 @@
-package IntroToDesignPattern_01.behaviour;
+package Ch_01_IntroToDesignPattern.behaviour;
 
 public class MuteQuack implements QuackBehaviour {
     @Override

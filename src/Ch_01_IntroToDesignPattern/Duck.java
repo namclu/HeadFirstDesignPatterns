@@ -1,7 +1,7 @@
-package IntroToDesignPattern_01;
+package Ch_01_IntroToDesignPattern;
 
-import IntroToDesignPattern_01.behaviour.FlyBehaviour;
-import IntroToDesignPattern_01.behaviour.QuackBehaviour;
+import Ch_01_IntroToDesignPattern.behaviour.FlyBehaviour;
+import Ch_01_IntroToDesignPattern.behaviour.QuackBehaviour;
 
 public abstract class Duck {
 
